@@ -83,17 +83,17 @@ double putValue(double strike, double s, double sd, double r, double days)
 
 int main(int argc, char *argv[])
 {
-     double strike_price = p_atof(argv[1]); //Change atof to p_atof to use posit version of the call
-     double asset_price = p_atof(argv[2]);
-     double standard_deviation = p_atof(argv[3]);
-     double risk_free_rate = p_atof(argv[4]);
-     double days_to_exp = p_atof(argv[5]);
-     printf("Strike Price: %f \n", ptod(strike_price)); //Pass double variable through ptod to print posit bit-pattern
-     printf("Asset Price:  %f \n", ptod(asset_price));
-     printf("Std Dev:      %f \n", ptod(standard_deviation));
-     printf("Risk Free:    %f \n", ptod(risk_free_rate));
-     printf("Days to Exp:  %f \n", ptod(days_to_exp));
-     printf("Put Value:    %.15f \n", ptod(putValue(strike_price, asset_price, standard_deviation, risk_free_rate, days_to_exp)));
-     printf("Call Value:   %.15f \n", ptod(callValue(strike_price, asset_price, standard_deviation, risk_free_rate, days_to_exp)));
+     double strike_price = (argv[1]); //Change atof to p_atof to use posit version of the call
+     double asset_price = (argv[2]);
+     double standard_deviation = (argv[3]);
+     double risk_free_rate = (argv[4]);
+     double days_to_exp = (argv[5]);
+     printf("Strike Price: %f \n", (strike_price)); //Pass double variable through ptod to print posit bit-pattern
+     printf("Asset Price:  %f \n", (asset_price));
+     printf("Std Dev:      %f \n", (standard_deviation));
+     printf("Risk Free:    %f \n", (risk_free_rate));
+     printf("Days to Exp:  %f \n", (days_to_exp));
+     printf("Put Value:    %.15f \n", (putValue(strike_price, asset_price, standard_deviation, risk_free_rate, days_to_exp)));
+     printf("Call Value:   %.15f \n", (callValue(strike_price, asset_price, standard_deviation, risk_free_rate, days_to_exp)));
      return 0;
 }
